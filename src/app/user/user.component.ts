@@ -11,7 +11,7 @@ interface User {
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styles: [ `input{width:100%;padding: 10px 15px;margin:5px auto;}` ]
+  styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
   selectedUser: User | null = null;

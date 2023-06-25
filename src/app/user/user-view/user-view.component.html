@@ -1,17 +1,36 @@
 <div class="row">
     <div class="col-12">
-        <button [routerLink]="['/']">
-            Userlist
+        <button class="btn btn-primary" [routerLink]="['/']">
+            << Userlist
         </button>
     </div>
 </div>
 <div class="row">
     <div class="col-12">
       <div class="container-fluid">
-        <p>Name: {{this.selecteduser.name}}</p>
-        <p>Email: {{this.selecteduser.email}}</p>
-        <p>Phone: {{this.selecteduser.phone}}</p>
-        <p>Address: {{this.selecteduser.address}}</p>
+        
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+            <h2>Name</h2>
+            <p> {{this.selecteduser.name}}</p>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+            <h2>Email</h2>
+            <p> {{this.selecteduser.email}}</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column" style="background-color:#ccc;">
+            <h2>Phone</h2>
+            <p> {{this.selecteduser.phone}}</p>
+            </div>
+            <div class="column" style="background-color:#ddd;">
+            <h2>Address</h2>
+            <p> {{this.selecteduser.address}}</p>
+            </div>
+        </div>
+        
 </div>
 </div>
 </div>

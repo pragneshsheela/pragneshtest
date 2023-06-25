@@ -1,0 +1,19 @@
+.btn-primary{
+    margin: 5px auto !important;
+}
+input{width:100%;padding: 10px 15px;margin:5px auto;}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
