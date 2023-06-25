@@ -1,0 +1,62 @@
+<p>user works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header ">
+                    <h4 class="card-title">User List
+                        <!-- : <span style="color:Green;font-weight:bold;"> April 2023 </span> -->
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+              <div class="igroupnput col-6">                               
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" (keyup)="searchByEmail($event)" aria-describedby="basic-addon1">               
+            </div>
+            <div class="igroupnput col-6"> 
+              <a [routerLink]="['user-add']">Create User </a>
+            </div>
+
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="container-fluid">
+      <div *ngIf ="!uservis">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users  | filter: searchEmail">
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.phone }}</td>
+              <td>
+                <button (click)="deleteUser(user)">Delete</button>
+                <button [routerLink]="['user-view/'+ user.name]">
+                                        View
+                                    </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div *ngIf ="uservis">
+        No Records found
+      </div>
+    
+    </div>
+    </div>
+</div>
+
